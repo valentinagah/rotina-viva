@@ -1,0 +1,33 @@
+# Rotina Viva 🧩
+
+O **Rotina Viva** é um aplicativo mobile multiplataforma (iOS/Android) projetado especificamente para apoiar a rotina diária de crianças com **Autismo Nível 3 de Suporte** e **Transtorno Opositor Desafiador (TOD)**. 
+
+O foco do projeto é reduzir a sobrecarga sensorial, mitigar gatilhos de confronto e promover a autonomia através de suportes visuais e técnicos validados pela análise do comportamento aplicada (ABA).
+
+## 🚀 Pilares Terapêuticos & Funcionalidades
+
+- **Comunicação Baseada em PECS:** Uso prioritário de fotografias reais e pictogramas de alto contraste em vez de textos complexos.
+- **Técnica da Escolha Controlada (Anti-TOD):** Telas de transição que oferecem duas opções válidas para a criança ("Escovar os dentes" ou "Botar o pijama"), fornecendo senso de controle e reduzindo comportamentos de oposição.
+- **Timer Visual Decrescente:** Representação analógica do tempo para previsibilidade e redução da ansiedade em transições de atividades.
+- **Economia de Fichas sem Punição:** Sistema de gamificação focado exclusivamente em reforço positivo (ganho de estrelas/fichas), sem mecânicas de perda de pontos para evitar crises.
+
+## 🛠️ Stack Tecnológica Recomendada
+
+- **Framework:** Flutter (Dart) ou React Native
+- **Banco de Dados Local:** Hive ou SQLite (Operação 100% Offline)
+- **Gerenciamento de Estado:** Bloc ou Provider
+
+## 📁 Estrutura de Pastas do Projeto (Padrão Flutter)
+
+```text
+lib/
+├── core/                  # Configurações globais, temas de cores e utilitários
+│   ├── theme/             # Cores pastéis e fontes acessíveis (Neurodiversas)
+│   └── constants/         # Caminhos de áudio suaves e ícones
+├── data/                  # Camada de persistência local (Offline-first)
+│   ├── database/          # Inicialização do banco de dados (Hive/SQLite)
+│   └── models/            # Modelos de dados: Tarefa, Passo, HistoricoCrise
+├── features/              # Funcionalidades divididas por contexto
+│   ├── crianca_dashboard/ # Telas da criança (Timer, Escolha Controlada)
+│   └── pais_dashboard/    # Configurações dos pais, upload de fotos e relatórios
+└── main.dart              # Ponto de entrada do aplicativo
